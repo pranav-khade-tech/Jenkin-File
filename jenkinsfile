@@ -1,30 +1,26 @@
-pipeline {
+pipeline{
     agent any
-
-    stages {
-        stage('pull') {
-            steps {
-                git 'https://github.com/pranav-khade-tech/Installing-Jenkin-on-Ubuntu.git'
-            }
-        stage('Build') {
-            steps {
-                echo 'Building..'
+    
+    stages{
+        stage('Pull'){
+            steps{
+            git 'https://github.com/iamtruptimane/sample-node-file.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+        stage('apply'){
+            steps{
+                echo "Apply successfully"
             }
         }
         stage('test'){
-           steps {
-                echo 'Testing Done....'
-            } 
+            steps{
+                echo "test succesfully"
+            }
+        }
+        stage('Build'){
+            steps{
+                echo "build sucessfully"
+            }
         }
     }
 }
